@@ -5,8 +5,7 @@ class DeclarationsController < ApplicationController
   def add
     if Rails.env.development?
       # Fake IP address in development because otherwise 127.0.0.1
-      # OraHQ Public IP Adress
-      ip_address = '101.98.110.75'
+      ip_address = Faker::Internet.ip_v4_address
     else
       ip_address = request.remote_ip
     end

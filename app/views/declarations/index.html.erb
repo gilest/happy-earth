@@ -1,2 +1,12 @@
+<%= content_for(:head) do %>
+  <script type="text/javascript">
+    window.locations = [
+      <% Declaration.all.each do |declaration| %>
+        [<%= declaration.latitude %>, <%= declaration.longitude %>],
+      <% end %>
+    ]
+  </script>
+<% end %>
+
 <div id="earth_div"></div>
 <%= link_to "I AM HAPPY (#{Declaration.count})", add_declarations_path, id: 'create_declaration' %>

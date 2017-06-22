@@ -4,7 +4,10 @@
 
 #earth_div{
   background-image: asset-url('SNice.svg');
-  top: 0; right: 0; bottom: 10%; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 10%;
+  left: 0;
   background-color: #000; position: absolute !important;
 }
 
@@ -18,5 +21,17 @@
   background-color: white;
   cursor: pointer;
   text-align: center;
+  font-size: 30px;
   color: red;
+}
+
+$icon-size: 20px;
+.we-pm-icon {
+  background-image: asset-url('SNice.svg') !important;
+  background-size: 100% !important;
+  width: $icon-size !important;
+  height: $icon-size !important;
+  margin-top: -$icon-size !important;
+  margin-left: -$icon-size / 2 !important;
+  border-radius: 20px !important;
 }
