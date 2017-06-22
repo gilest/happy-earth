@@ -1,0 +1,22 @@
+// Place all the styles related to the declarations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#earth_div{
+  background-image: asset-url('SNice.svg');
+  top: 0; right: 0; bottom: 10%; left: 0;
+  background-color: #000; position: absolute !important;
+}
+
+#create_declaration {
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10%;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  color: red;
+}

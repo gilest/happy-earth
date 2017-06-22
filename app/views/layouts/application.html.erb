@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HappyEarth</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      function initialize() {
+        var options = {atmosphere: false, center: [0, 0], zoom: 3};
+        var earth = new WE.map('earth_div', options);
+        WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg', {
+          minZoom: 0,
+          maxZoom: 5,
+          attribution: 'NASA'
+        }).addTo(earth);
+      }
+
+      $( document ).on('turbolinks:load', function() {
+          initialize();
+      });
+    </script>
+    <title>Happy Earth</title>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
