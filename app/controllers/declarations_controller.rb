@@ -1,5 +1,6 @@
 class DeclarationsController < ApplicationController
   def index
+    @countries = Declaration.where.not(country_name: '').group(:country_name).order('count(*) DESC').pluck(:country_name)
   end
 
   def add
