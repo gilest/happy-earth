@@ -8,5 +8,20 @@
   </script>
 <% end %>
 
-<div id="earth_div"></div>
+<div class="list-countries">
+  <h1>List of countries</h1>
+  <div>
+    <ul>
+      <% @countries.each do |country| %>
+          <li><%= country %></li>
+      <% end %>
+
+      <%#=
+    Declaration.all.as_json
+      %>
+    </ul>
+  </div>
+</div>
+
+<div id="earth_div"></div>  
 <%= link_to "I AM HAPPY (#{Declaration.count})", add_declarations_path, id: 'create_declaration' %>
