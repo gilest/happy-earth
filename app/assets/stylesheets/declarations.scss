@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #earth_div{
-  background-image: asset-url('SNice.svg');
+  // background-image: asset-url('SNice.svg');
   top: 0;
   right: 0;
   bottom: 10%;
   left: 0;
-  background-color: #000; position: absolute !important;
+  // background-color: #000; position: absolute !important;
+  position: absolute !important;
 }
 
 #create_declaration {
@@ -34,4 +35,9 @@ $icon-size: 20px;
   margin-top: -$icon-size !important;
   margin-left: -$icon-size / 2 !important;
   border-radius: 20px !important;
+}
+
+.list-countries {
+  float: left;
+  color: red;
 }
